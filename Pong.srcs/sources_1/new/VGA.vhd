@@ -27,8 +27,8 @@ entity VGA is
         BTNU,BTNL, BTNR, BTND: in std_logic;
         VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
         VGA_HS, VGA_VS, v_sync, h_sync: out std_logic;
-        score_pad1 : out integer;
-        score_pad2 : out integer
+        score_pad1 : out integer range 0 to 9 := 0;
+        score_pad2 : out integer range 0 to 9 := 0
     );
 end VGA;
 
@@ -63,6 +63,10 @@ signal pad1_on : std_logic;
 signal pad2_on : std_logic;
 constant pad_width: integer := 5;
 constant pad_length: integer := 25;
+
+--score signalen
+signal score1 : integer range 0 to 9 := 0;
+signal score2 : integer range 0 to 9 := 0;
 
 begin
 
@@ -142,18 +146,38 @@ begin
     --Ball hits right border moving up
     if ((h_pos_ball >= hva - border_size - ball_size) and (v_pos_ball <= up_direction)) then   --border_size nog bij afgetrokken zodat hij tegen de witte rand botst
       ball_h_motion <= left_direction;    --Ball beweegt naar links
+      if(score1 < 9) then
+        score1 <= score1 + 1;
+      else
+        score1 <= 0;
+      end if;
     --Ball hits right border moving down
     elsif((h_pos_ball >= hva - border_size - ball_size) and (v_pos_ball <= down_direction)) then
       ball_h_motion <= left_direction;    --Ball beweegt naar links
-    
+      if(score1 < 9) then
+        score1 <= score1 + 1;
+      else
+        score1 <= 0;
+      end if;
     --Ball hits left border moving up
     elsif((h_pos_ball <= border_size + ball_size) and (v_pos_ball <= up_direction)) then
       ball_h_motion <= right_direction;   --Ball beweegt naar rechts
+      if(score2 < 9) then
+        score2 <= score2 + 1;
+      else
+        score2 <= 0;
+      end if;
     --Ball hits left border moving down
     elsif((h_pos_ball <= border_size + ball_size) and (v_pos_ball <= down_direction)) then
       ball_h_motion <= right_direction;   --Ball beweegt naar rechts
+      if(score2 < 9) then
+        score2 <= score2 + 1;
+      else
+        score2 <= 0;
+      end if;
     end if;
-    
+    score_pad1 <= score1;
+    score_pad2 <= score2;
     h_pos_ball <= h_pos_ball + ball_h_motion; --Berekent volgende ball positie
 end process;
 

@@ -36,6 +36,8 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd
   C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd
+  C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd
+  C:/Vivado/Pong/Pong.srcs/sources_1/new/intTo7Segm.vhd
   C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd
 }
 read_ip -quiet C:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci

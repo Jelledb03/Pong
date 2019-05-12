@@ -8,7 +8,15 @@ entity Overkoepelend is
        clk_in1: in std_logic;  --Is de 100MHz klok die binnenkomt van XDC file
        BTNU, BTNL, BTNR, BTND: in std_logic;
        VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
-       VGA_HS, VGA_VS: out std_logic
+       VGA_HS, VGA_VS: out std_logic;
+       AN : out std_logic_vector (7 downto 0);
+       CA : out std_logic;
+       CB : out std_logic;
+       CC : out std_logic;
+       CD : out std_logic;
+       CE : out std_logic;
+       CF : out std_logic;
+       CG : out std_logic
     );
 end Overkoepelend;
 
@@ -36,7 +44,14 @@ signal h_pos: integer range 0 to h_max;
 signal v_sync: std_logic;
 signal h_sync: std_logic;
 signal locked : std_logic := '0';
-signal score_pad1, score_pad2 : integer;
+
+--clkdivider (100Hz pulse) Signals
+signal pulseout100hz : std_logic;
+constant div: integer := 250000; -- van 25MHz => 100Hz
+
+--Score Signals
+signal score_pad1, score_pad2 : integer range 0 to 9;
+constant numberDisplays : integer := 8;
 
    component clk_wiz_0
    port(
@@ -77,7 +92,30 @@ signal score_pad1, score_pad2 : integer;
      v_pos: in integer;
      VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
      VGA_HS, VGA_VS: out std_logic;
-     score_pad1, score_pad2: out integer
+     score_pad1, score_pad2: out integer range 0 to 9
+   );
+   end component;
+   
+   component clkdivider is
+   generic (divideby : natural := 2);
+   Port ( 
+     clk_div : in std_logic;
+     pulseout : out std_logic);
+   end component;
+   
+   component intTo7Segm is
+   generic (max : integer := 8);
+   Port ( score1 : in integer range 0 to 9;
+     score2 : in integer range 0 to 9;
+     segm_clk : in std_logic;
+     AN : out std_logic_vector (7 downto 0);
+     CA : out std_logic;
+     CB : out std_logic;
+     CC : out std_logic;
+     CD : out std_logic;
+     CE : out std_logic;
+     CF : out std_logic;
+     CG : out std_logic
    );
    end component;
 
@@ -96,6 +134,17 @@ begin
             v_pos => v_pos,
             new_frame => new_frame
     );
+    
+    divider: clkdivider 
+    generic map (
+        divideby => div
+    )
+    port map(
+      clk_div => clk_out1,
+      pulseout => pulseout100hz
+    );
+      
+      
         
     vga_mapping : vga port map (
         hva => hva,
@@ -124,5 +173,23 @@ begin
         score_pad1 => score_pad1,
         score_pad2 => score_pad2
     );
+    
+    intToSegm : intTo7Segm
+    generic map(
+       max => numberDisplays
+    )    
+    port map (
+       score1 => score_pad1,
+       score2 => score_pad2,
+       segm_clk => pulseout100hz,
+       AN => AN,
+       CA => CA,
+       CB => CB,
+       CC => CC,
+       CD => CD,
+       CE => CE,
+       CF => CF,
+       CG => CG
+     );
              
 end Structural;

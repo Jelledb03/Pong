@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557674068">
+<GenRun Id="synth_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557688062">
   <File Type="PA-TCL" Name="Overkoepelend.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Overkoepelend_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Overkoepelend_reports.tcl"/>
@@ -23,6 +23,18 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../sessie9/sessie9.srcs/sources_1/new/VGA.vhd"/>
         <Attr Name="ImportTime" Val="1556546929"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clkdivider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/intTo7Segm.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

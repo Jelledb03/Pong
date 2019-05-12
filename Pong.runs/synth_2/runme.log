@@ -14,90 +14,271 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20236 
+INFO: Helper process launched with PID 33296 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 402.910 ; gain = 97.281
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 402.750 ; gain = 97.406
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Overkoepelend' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:14]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-22264-NVS1/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Klokje' of component 'clk_wiz_0' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-22264-NVS1/realtime/clk_wiz_0_stub.vhdl:13]
+INFO: [Synth 8-638] synthesizing module 'Overkoepelend' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:23]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-43228-NVS1/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Klokje' of component 'clk_wiz_0' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-43228-NVS1/realtime/clk_wiz_0_stub.vhdl:13]
 	Parameter v_max bound to: 525 - type: integer 
 	Parameter h_max bound to: 800 - type: integer 
-INFO: [Synth 8-3491] module 'opteller' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd:5' bound to instance 'teller' of component 'opteller' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:88]
+INFO: [Synth 8-3491] module 'opteller' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd:5' bound to instance 'teller' of component 'opteller' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:128]
 INFO: [Synth 8-638] synthesizing module 'opteller' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd:14]
 	Parameter h_max bound to: 800 - type: integer 
 	Parameter v_max bound to: 525 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'opteller' (1#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd:14]
-INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:13' bound to instance 'vga_mapping' of component 'vga' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:34]
-WARNING: [Synth 8-3848] Net score_pad1 in module/entity VGA does not have driver. [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:29]
-WARNING: [Synth 8-3848] Net score_pad2 in module/entity VGA does not have driver. [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:30]
-INFO: [Synth 8-256] done synthesizing module 'VGA' (2#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'Overkoepelend' (3#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:14]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[31]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[30]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[29]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[28]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[27]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[26]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[25]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[24]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[23]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[22]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[21]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[20]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[19]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[18]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[17]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[16]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[15]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[14]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[13]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[12]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[11]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[10]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[9]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[8]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[7]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[6]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[5]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[4]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[3]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[2]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[1]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad1[0]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[31]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[30]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[29]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[28]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[27]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[26]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[25]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[24]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[23]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[22]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[21]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[20]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[19]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[18]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[17]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[16]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[15]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[14]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[13]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[12]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[11]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[10]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[9]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[8]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[7]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[6]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[5]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[4]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[3]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[2]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[1]
-WARNING: [Synth 8-3331] design VGA has unconnected port score_pad2[0]
+	Parameter divideby bound to: 250000 - type: integer 
+INFO: [Synth 8-3491] module 'clkdivider' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd:5' bound to instance 'divider' of component 'clkdivider' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'clkdivider' [C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd:12]
+	Parameter divideby bound to: 250000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'clkdivider' (2#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd:12]
+INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:13' bound to instance 'vga_mapping' of component 'vga' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'VGA' (3#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:35]
+	Parameter max bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'intTo7Segm' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/intTo7Segm.vhd:5' bound to instance 'intToSegm' of component 'intTo7Segm' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'intTo7Segm' [C:/Vivado/Pong/Pong.srcs/sources_1/new/intTo7Segm.vhd:22]
+	Parameter max bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'intTo7Segm' (4#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/intTo7Segm.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Overkoepelend' (5#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:23]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[31]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[30]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[29]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[28]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[27]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[26]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[25]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[24]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[23]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[22]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[21]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[20]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[19]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[18]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[17]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[16]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[15]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[14]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[13]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[12]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[11]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[10]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[9]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[8]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[7]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[6]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[5]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[4]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[3]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[2]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[1]
+WARNING: [Synth 8-3331] design VGA has unconnected port hbp[0]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[31]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[30]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[29]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[28]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[27]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[26]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[25]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[24]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[23]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[22]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[21]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[20]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[19]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[18]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[17]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[16]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[15]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[14]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[13]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[12]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[11]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[10]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[9]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[8]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[7]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[6]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[5]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[4]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[3]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[2]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[1]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 457.980 ; gain = 152.637
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 457.980 ; gain = 152.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 457.980 ; gain = 152.637
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Klokje'
+Finished Parsing XDC File [c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Klokje'
+Parsing XDC File [C:/Vivado/sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Vivado/sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Vivado/sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Overkoepelend_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Overkoepelend_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 816.176 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 816.176 ; gain = 510.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 816.176 ; gain = 510.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for Klokje. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 816.176 ; gain = 510.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "pulseout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:187]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:199]
+INFO: [Synth 8-5544] ROM "VGA_R" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_v_motion" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_v_motion" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ball_h_motion" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "cSegm[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 816.176 ; gain = 510.832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 20    
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               18 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	   6 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module opteller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module clkdivider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module VGA 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 20    
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module intTo7Segm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "divider/pulseout" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[31]
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[30]
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[29]
@@ -135,175 +316,6 @@ WARNING: [Synth 8-3331] design VGA has unconnected port vbp[30]
 WARNING: [Synth 8-3331] design VGA has unconnected port vbp[29]
 WARNING: [Synth 8-3331] design VGA has unconnected port vbp[28]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 458.012 ; gain = 152.383
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 458.012 ; gain = 152.383
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 458.012 ; gain = 152.383
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Klokje'
-Finished Parsing XDC File [c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Klokje'
-Parsing XDC File [C:/Vivado/sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [C:/Vivado/sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Vivado/sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Overkoepelend_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Overkoepelend_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Completed Processing XDC Constraints
-
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 814.656 ; gain = 0.000
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 814.656 ; gain = 509.027
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xc7a100tcsg324-1
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 814.656 ; gain = 509.027
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
-Applied set_property DONT_TOUCH = true for Klokje. (constraint file  auto generated constraint, line ).
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 814.656 ; gain = 509.027
----------------------------------------------------------------------------------
-INFO: [Synth 8-5544] ROM "VGA_R" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ball_v_motion" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ball_v_motion" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ball_h_motion" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 814.656 ; gain = 509.027
----------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     33 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 20    
-	   2 Input     31 Bit       Adders := 2     
-	   2 Input     10 Bit       Adders := 2     
-+---Registers : 
-	               32 Bit    Registers := 2     
-	               10 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 4     
-	   4 Input     32 Bit        Muxes := 1     
-	   6 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     31 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 8     
-	   6 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module opteller 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 2     
-+---Registers : 
-	               10 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module VGA 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     33 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 20    
-	   2 Input     31 Bit       Adders := 2     
-+---Registers : 
-	               32 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 4     
-	   4 Input     32 Bit        Muxes := 1     
-	   6 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     31 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 8     
-	   6 Input      4 Bit        Muxes := 1     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 240 (col length:80)
-BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[0]' (FDRE) to 'vga_mapping/ball_h_motion_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/\ball_h_motion_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vga_mapping/\ball_h_motion_reg[2] )
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[3]' (FDRE) to 'vga_mapping/ball_h_motion_reg[4]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[4]' (FDRE) to 'vga_mapping/ball_h_motion_reg[5]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[5]' (FDRE) to 'vga_mapping/ball_h_motion_reg[6]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[6]' (FDRE) to 'vga_mapping/ball_h_motion_reg[7]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[7]' (FDRE) to 'vga_mapping/ball_h_motion_reg[8]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[8]' (FDRE) to 'vga_mapping/ball_h_motion_reg[9]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[9]' (FDRE) to 'vga_mapping/ball_h_motion_reg[10]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[10]' (FDRE) to 'vga_mapping/ball_h_motion_reg[11]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[11]' (FDRE) to 'vga_mapping/ball_h_motion_reg[12]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[12]' (FDRE) to 'vga_mapping/ball_h_motion_reg[13]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[13]' (FDRE) to 'vga_mapping/ball_h_motion_reg[14]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[14]' (FDRE) to 'vga_mapping/ball_h_motion_reg[15]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[15]' (FDRE) to 'vga_mapping/ball_h_motion_reg[16]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[16]' (FDRE) to 'vga_mapping/ball_h_motion_reg[17]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[17]' (FDRE) to 'vga_mapping/ball_h_motion_reg[18]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[18]' (FDRE) to 'vga_mapping/ball_h_motion_reg[19]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[19]' (FDRE) to 'vga_mapping/ball_h_motion_reg[20]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[20]' (FDRE) to 'vga_mapping/ball_h_motion_reg[21]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[21]' (FDRE) to 'vga_mapping/ball_h_motion_reg[22]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[22]' (FDRE) to 'vga_mapping/ball_h_motion_reg[23]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[23]' (FDRE) to 'vga_mapping/ball_h_motion_reg[24]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[24]' (FDRE) to 'vga_mapping/ball_h_motion_reg[25]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[25]' (FDRE) to 'vga_mapping/ball_h_motion_reg[26]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[26]' (FDRE) to 'vga_mapping/ball_h_motion_reg[27]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[27]' (FDRE) to 'vga_mapping/ball_h_motion_reg[28]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[28]' (FDRE) to 'vga_mapping/ball_h_motion_reg[29]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[29]' (FDRE) to 'vga_mapping/ball_h_motion_reg[30]'
-INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[30]' (FDRE) to 'vga_mapping/ball_h_motion_reg[31]'
 INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_v_motion_reg[0]' (FDRE) to 'vga_mapping/ball_v_motion_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/\ball_v_motion_reg[1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (vga_mapping/\ball_v_motion_reg[2] )
@@ -335,16 +347,47 @@ INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_v_motion_reg[27]' (FDRE)
 INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_v_motion_reg[28]' (FDRE) to 'vga_mapping/ball_v_motion_reg[29]'
 INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_v_motion_reg[29]' (FDRE) to 'vga_mapping/ball_v_motion_reg[30]'
 INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_v_motion_reg[30]' (FDRE) to 'vga_mapping/ball_v_motion_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_122/\h_pos_ball_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_63/\v_pos_ball_reg[1] )
-WARNING: [Synth 8-3332] Sequential element (ball_v_motion_reg[2]) is unused and will be removed from module VGA.
-WARNING: [Synth 8-3332] Sequential element (ball_v_motion_reg[1]) is unused and will be removed from module VGA.
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[0]' (FDRE) to 'vga_mapping/ball_h_motion_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/\ball_h_motion_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vga_mapping/\ball_h_motion_reg[2] )
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[3]' (FDRE) to 'vga_mapping/ball_h_motion_reg[4]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[4]' (FDRE) to 'vga_mapping/ball_h_motion_reg[5]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[5]' (FDRE) to 'vga_mapping/ball_h_motion_reg[6]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[6]' (FDRE) to 'vga_mapping/ball_h_motion_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[7]' (FDRE) to 'vga_mapping/ball_h_motion_reg[8]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[8]' (FDRE) to 'vga_mapping/ball_h_motion_reg[9]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[9]' (FDRE) to 'vga_mapping/ball_h_motion_reg[10]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[10]' (FDRE) to 'vga_mapping/ball_h_motion_reg[11]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[11]' (FDRE) to 'vga_mapping/ball_h_motion_reg[12]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[12]' (FDRE) to 'vga_mapping/ball_h_motion_reg[13]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[13]' (FDRE) to 'vga_mapping/ball_h_motion_reg[14]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[14]' (FDRE) to 'vga_mapping/ball_h_motion_reg[15]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[15]' (FDRE) to 'vga_mapping/ball_h_motion_reg[16]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[16]' (FDRE) to 'vga_mapping/ball_h_motion_reg[17]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[17]' (FDRE) to 'vga_mapping/ball_h_motion_reg[18]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[18]' (FDRE) to 'vga_mapping/ball_h_motion_reg[19]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[19]' (FDRE) to 'vga_mapping/ball_h_motion_reg[20]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[20]' (FDRE) to 'vga_mapping/ball_h_motion_reg[21]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[21]' (FDRE) to 'vga_mapping/ball_h_motion_reg[22]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[22]' (FDRE) to 'vga_mapping/ball_h_motion_reg[23]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[23]' (FDRE) to 'vga_mapping/ball_h_motion_reg[24]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[24]' (FDRE) to 'vga_mapping/ball_h_motion_reg[25]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[25]' (FDRE) to 'vga_mapping/ball_h_motion_reg[26]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[26]' (FDRE) to 'vga_mapping/ball_h_motion_reg[27]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[27]' (FDRE) to 'vga_mapping/ball_h_motion_reg[28]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[28]' (FDRE) to 'vga_mapping/ball_h_motion_reg[29]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[29]' (FDRE) to 'vga_mapping/ball_h_motion_reg[30]'
+INFO: [Synth 8-3886] merging instance 'vga_mapping/ball_h_motion_reg[30]' (FDRE) to 'vga_mapping/ball_h_motion_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_126/\v_pos_ball_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_67/\h_pos_ball_reg[1] )
 WARNING: [Synth 8-3332] Sequential element (ball_h_motion_reg[2]) is unused and will be removed from module VGA.
 WARNING: [Synth 8-3332] Sequential element (ball_h_motion_reg[1]) is unused and will be removed from module VGA.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_122/\h_pos_ball_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_63/\v_pos_ball_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (ball_v_motion_reg[2]) is unused and will be removed from module VGA.
+WARNING: [Synth 8-3332] Sequential element (ball_v_motion_reg[1]) is unused and will be removed from module VGA.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_126/\v_pos_ball_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_mapping/i_67/\h_pos_ball_reg[0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 814.656 ; gain = 509.027
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 816.176 ; gain = 510.832
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -358,13 +401,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Klokje/clk_out1' to pin 'Klokje/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 814.656 ; gain = 509.027
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 816.176 ; gain = 510.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 826.578 ; gain = 520.949
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 834.605 ; gain = 529.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -376,7 +419,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -400,7 +443,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -413,7 +456,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -425,25 +468,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -461,33 +504,36 @@ Report Cell Usage:
 |      |Cell             |Count |
 +------+-----------------+------+
 |1     |clk_wiz_0_bbox_0 |     1|
-|2     |CARRY4           |   139|
-|3     |LUT1             |    80|
-|4     |LUT2             |   467|
-|5     |LUT3             |     4|
-|6     |LUT4             |    38|
-|7     |LUT5             |     6|
+|2     |CARRY4           |   200|
+|3     |LUT1             |   141|
+|4     |LUT2             |   658|
+|5     |LUT3             |    79|
+|6     |LUT4             |    95|
+|7     |LUT5             |    15|
 |8     |LUT6             |    13|
-|9     |FDRE             |    83|
-|10    |OBUF             |    14|
+|9     |FDRE             |   184|
+|10    |IBUF             |     4|
+|11    |OBUF             |    29|
 +------+-----------------+------+
 
 Report Instance Areas: 
-+------+--------------+---------+------+
-|      |Instance      |Module   |Cells |
-+------+--------------+---------+------+
-|1     |top           |         |   845|
-|2     |  teller      |opteller |   317|
-|3     |  vga_mapping |VGA      |   443|
-+------+--------------+---------+------+
++------+--------------+-----------+------+
+|      |Instance      |Module     |Cells |
++------+--------------+-----------+------+
+|1     |top           |           |  1419|
+|2     |  divider     |clkdivider |    28|
+|3     |  intToSegm   |intTo7Segm |    25|
+|4     |  teller      |opteller   |   340|
+|5     |  vga_mapping |VGA        |   901|
++------+--------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 837.473 ; gain = 532.129
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 132 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 827.344 ; gain = 165.070
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 827.344 ; gain = 521.715
+Synthesis finished with 0 errors, 0 critical warnings and 68 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 837.473 ; gain = 173.934
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 837.473 ; gain = 532.129
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 139 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 204 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -495,11 +541,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-95 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+106 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 827.344 ; gain = 533.188
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 837.473 ; gain = 543.602
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Vivado/Pong/Pong.runs/synth_2/Overkoepelend.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Overkoepelend_utilization_synth.rpt -pb Overkoepelend_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 827.344 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun May 12 17:14:59 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 837.473 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 12 21:08:16 2019...
