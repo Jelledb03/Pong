@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557672668">
+<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557674068">
   <File Type="BITSTR-BMM" Name="Overkoepelend_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Overkoepelend_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Overkoepelend_timing_summary_init.rpt"/>
@@ -114,7 +114,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

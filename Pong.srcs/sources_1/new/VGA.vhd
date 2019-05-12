@@ -24,6 +24,7 @@ entity VGA is
         h_pos: in integer;          -- posities komen binnen
         v_pos: in integer;
         new_frame: in std_logic;
+        BTNU,BTNL, BTNR, BTND: in std_logic;
         VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
         VGA_HS, VGA_VS, v_sync, h_sync: out std_logic;
         score_pad1 : out integer;
@@ -53,9 +54,10 @@ signal ball_h_motion: integer := left_direction;
 signal ball_v_motion: integer := up_direction;
 
 --pad signalen
+--mogen de horizontale posities constant zijn? Want die veranderen nooit
 signal h_leftPos_pad1: integer := 10; --Linkse positie van eerste pad (is de linkse)
 signal v_topPos_pad1: integer := vva/2;     --Denk nog pad length of pad length /2 bij optellen om in het midden te komen
-signal h_rightPos_pad2: integer := vva - 10; --Rechtse positie van tweede pad (is de rechtse)
+signal h_rightPos_pad2: integer := vva - 10; --Rechtse positie van tweede pad (is de rechtse) 
 signal v_topPos_pad2: integer := vva/2;
 signal pad1_on : std_logic;
 signal pad2_on : std_logic;
@@ -129,6 +131,8 @@ begin
     or    ((v_pos_ball <= border_size + ball_size) and (h_pos_ball <= right_direction)) then
       ball_v_motion <= down_direction;    --Ball beweegt naar beneden    
     end if;
+    
+    v_pos_ball <= v_pos_ball + ball_v_motion; --Berekent volgende ball positie
 end process;
 
 p_move_ball_h: process       --Verandert de horizontale richting van de ball per frame (new_frame = '1')
@@ -148,10 +152,34 @@ begin
     --Ball hits left border moving down
     elsif((h_pos_ball <= border_size + ball_size) and (v_pos_ball <= down_direction)) then
       ball_h_motion <= right_direction;   --Ball beweegt naar rechts
-      
     end if;
+    
+    h_pos_ball <= h_pos_ball + ball_h_motion; --Berekent volgende ball positie
 end process;
 
+p_move_pad1: process       --Verandert de positie van pad1
+begin
+  wait until(rising_edge(vga_clk) and new_frame = '1');
+    if(BTNU = '1' and (v_topPos_pad1 > border_size)) then       --Kijkt ook na of hij tegen de top van het veld zit
+      v_topPos_pad1 <= v_topPos_pad1 + 1;
+    elsif(BTNL = '1' and (v_topPos_pad1 < vva)) then        --Kijkt ook na of hij tegen de onderkant van het veld zit
+      v_topPos_pad1 <= v_topPos_pad1 - 1;
+    else
+      v_topPos_pad1 <= v_topPos_pad1;  --Verandert er niet
+    end if;  
+end process;
+
+p_move_pad2: process       --Verandert de positie van pad2
+begin
+  wait until(rising_edge(vga_clk) and new_frame = '1');
+    if(BTNR = '1' and (v_topPos_pad2 > border_size)) then       --Kijkt ook na of hij tegen de top van het veld zit
+      v_topPos_pad2 <= v_topPos_pad2 + 1;
+    elsif(BTND = '1' and (v_topPos_pad1 < vva)) then        --Kijkt ook na of hij tegen de onderkant van het veld zit
+      v_topPos_pad2 <= v_topPos_pad2 - 1;
+    else
+      v_topPos_pad2 <= v_topPos_pad2;  --Verandert er niet
+    end if;
+end process;
 
 p_kleur: process(h_pos, v_pos, hva, vva, ball_on, pad1_on, pad2_on)  --Kleurt het scherm tijdens visible area (Constanten niet in sensitivity list)
 begin                   

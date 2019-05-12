@@ -6,6 +6,7 @@ entity Overkoepelend is
     Port ( 
        --reset : in std_logic := '0';  --Kan gelijk gesteld worden aan button CPU reset? Niet kunnen testen
        clk_in1: in std_logic;  --Is de 100MHz klok die binnenkomt van XDC file
+       BTNU, BTNL, BTNR, BTND: in std_logic;
        VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
        VGA_HS, VGA_VS: out std_logic
     );
@@ -69,6 +70,7 @@ signal score_pad1, score_pad2 : integer;
      vbp: in integer;
      vga_clk : in std_logic;
      new_frame: in std_logic;
+     BTNU,BTNL, BTNR, BTND: in std_logic;
      v_sync : out std_logic;
      h_sync : out std_logic;
      h_pos: in integer;          -- posities komen binnen
@@ -106,6 +108,10 @@ begin
         vbp => vbp,
         vga_clk => clk_out1,
         new_frame => new_frame,
+        BTNU => BTNU,
+        BTNL => BTNL,
+        BTNR => BTNR,
+        BTND => BTND,
         v_sync => v_sync,
         h_sync => h_sync,
         h_pos => h_pos,
