@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun May 12 21:48:03 2019
+| Date         : Mon May 13 18:04:22 2019
 | Host         : Laptop-Jelle running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Overkoepelend_utilization_synth.rpt -pb Overkoepelend_utilization_synth.pb
 | Design       : Overkoepelend
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  693 |     0 |     63400 |  1.09 |
-|   LUT as Logic          |  693 |     0 |     63400 |  1.09 |
+| Slice LUTs*             |  361 |     0 |     63400 |  0.57 |
+|   LUT as Logic          |  361 |     0 |     63400 |  0.57 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  184 |     0 |    126800 |  0.15 |
-|   Register as Flip Flop |  184 |     0 |    126800 |  0.15 |
+| Slice Registers         |  106 |     0 |    126800 |  0.08 |
+|   Register as Flip Flop |  106 |     0 |    126800 |  0.08 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 184   |          Yes |       Reset |            - |
+| 106   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,15 +146,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |  658 |                 LUT |
-| CARRY4   |  200 |          CarryLogic |
-| FDRE     |  184 |        Flop & Latch |
-| LUT1     |  141 |                 LUT |
-| LUT4     |   95 |                 LUT |
-| LUT3     |   79 |                 LUT |
+| LUT2     |  412 |                 LUT |
+| CARRY4   |  119 |          CarryLogic |
+| FDRE     |  106 |        Flop & Latch |
+| LUT3     |   74 |                 LUT |
+| LUT4     |   50 |                 LUT |
 | OBUF     |   29 |                  IO |
-| LUT5     |   15 |                 LUT |
-| LUT6     |   13 |                 LUT |
+| LUT1     |   27 |                 LUT |
+| LUT6     |   14 |                 LUT |
+| LUT5     |    9 |                 LUT |
 | IBUF     |    4 |                  IO |
 +----------+------+---------------------+
 

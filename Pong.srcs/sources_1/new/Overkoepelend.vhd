@@ -108,6 +108,7 @@ constant numberDisplays : integer := 8;
    Port ( score1 : in integer range 0 to 9;
      score2 : in integer range 0 to 9;
      segm_clk : in std_logic;
+     pulse100hz : in std_logic;
      AN : out std_logic_vector (7 downto 0);
      CA : out std_logic;
      CB : out std_logic;
@@ -181,7 +182,8 @@ begin
     port map (
        score1 => score_pad1,
        score2 => score_pad2,
-       segm_clk => pulseout100hz,
+       segm_clk => clk_out1,
+       pulse100hz => pulseout100hz,
        AN => AN,
        CA => CA,
        CB => CB,

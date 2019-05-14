@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1557763414">
+  <File Type="BITSTR-BMM" Name="Overkoepelend_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Overkoepelend_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Overkoepelend_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Overkoepelend_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Overkoepelend.tcl"/>
+  <File Type="OPT-TIMING" Name="Overkoepelend_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Overkoepelend_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Overkoepelend_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Overkoepelend_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Overkoepelend_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Overkoepelend.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Overkoepelend_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Overkoepelend_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Overkoepelend_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Overkoepelend_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Overkoepelend_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Overkoepelend_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Overkoepelend_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Overkoepelend_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Overkoepelend_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Overkoepelend_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Overkoepelend_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Overkoepelend.bgn"/>
+  <File Type="PLACE-TIMING" Name="Overkoepelend_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Overkoepelend_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Overkoepelend.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Overkoepelend_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Overkoepelend_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Overkoepelend_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Overkoepelend.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Overkoepelend_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Overkoepelend_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Overkoepelend_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Overkoepelend_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Overkoepelend_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Overkoepelend_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Overkoepelend.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="Overkoepelend_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Overkoepelend.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Overkoepelend_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Overkoepelend_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="Overkoepelend.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Overkoepelend_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Overkoepelend_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Overkoepelend_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Overkoepelend_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Overkoepelend_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Overkoepelend_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Overkoepelend_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Overkoepelend_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Overkoepelend_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Overkoepelend_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Overkoepelend_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Overkoepelend_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Overkoepelend_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Overkoepelend_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Overkoepelend_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Overkoepelend_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Overkoepelend_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Overkoepelend_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Overkoepelend_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Overkoepelend.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Overkoepelend_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Overkoepelend.rbt"/>
+  <File Type="BITSTR-NKY" Name="Overkoepelend.nky"/>
+  <File Type="BG-DRC" Name="Overkoepelend.drc"/>
+  <File Type="RDI-RDI" Name="Overkoepelend.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Opteller.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sessie9/sessie9.srcs/sources_1/new/Opteller.vhd"/>
+        <Attr Name="ImportTime" Val="1556392498"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/VGA.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sessie9/sessie9.srcs/sources_1/new/VGA.vhd"/>
+        <Attr Name="ImportTime" Val="1556546929"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clkdivider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/intTo7Segm.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Overkoepelend.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sessie9/sessie9.srcs/sources_1/new/Overkoepelend.vhd"/>
+        <Attr Name="ImportTime" Val="1556548545"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Overkoepelend"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/new/Nexys-4-DDR-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sessie9/sessie9.srcs/sources_1/new/Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1556373545"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>
