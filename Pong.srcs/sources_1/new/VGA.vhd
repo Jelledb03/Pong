@@ -27,8 +27,8 @@ entity VGA is
         BTNU,BTNL, BTNR, BTND: in std_logic;
         VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
         VGA_HS, VGA_VS, v_sync, h_sync: out std_logic;
-        score_pad1 : out integer range 0 to 9 := 0;
-        score_pad2 : out integer range 0 to 9 := 0
+        score_pad1 : out integer range 0 to 20 := 0;
+        score_pad2 : out integer range 0 to 20 := 0
     );
 end VGA;
 
@@ -45,13 +45,10 @@ signal ball_on : std_logic;
 constant ball_size: integer := 4;
 
 --Movement
-constant motion_speed: integer := 3;
-constant up_direction: integer := motion_speed;
-constant down_direction: integer := -motion_speed;
-constant left_direction: integer := motion_speed;              --Creert alle movement signalen en constanten
-constant right_direction : integer := -motion_speed;
-signal ball_h_motion: integer := left_direction;
-signal ball_v_motion: integer := up_direction;
+constant ball_speed: integer := 3;
+signal ball_up: std_logic := '1'; --Laat de bal starten om naar rechts boven te gaan
+signal ball_left: std_logic := '0';
+
 
 --pad signalen
 --mogen de horizontale posities constant zijn? Want die veranderen nooit
@@ -66,8 +63,8 @@ signal pad1_on : std_logic;
 signal pad2_on : std_logic;
 
 --score signalen
-signal score1 : integer range 0 to 9 := 0;
-signal score2 : integer range 0 to 9 := 0;
+signal score1 : integer range 0 to 20 := 0;
+signal score2 : integer range 0 to 20 := 0;
 
 begin
 
@@ -122,65 +119,77 @@ begin
     end if;
 end process;
 
---p_move_ball_v: process       --Verandert de verticale richting van de ball per frame (new_frame = '1')
---begin
---  wait until(rising_edge(vga_clk) and new_frame = '1');
-      
---    --Ball hits bottom moving left or right
---    if ((v_pos_ball >= vva - border_size - ball_size) and (h_pos_ball <= left_direction))   --border_size nog bij afgetrokken zodat hij tegen de witte rand botst
---    or ((v_pos_ball >= vva - border_size - ball_size) and (h_pos_ball <= right_direction)) then
---      ball_v_motion <= up_direction;    --Ball beweegt naar boven
+--Dit zou voldoende moeten zijn om de bal rond het speelveld te laten botsen en een punt aan te rekenen wanneer deze de linker of recht rand aanraakt
+--Ook het botsen met de paddles zou geimplementeerd moeten zijn
+p_move_ball: process       --Verandert de verticale richting van de ball per frame (new_frame = '1')
+begin
+  wait until(rising_edge(vga_clk));
+    if(new_frame = '1') then
+        --Kijken of ball boven of onder raakt
+        if((v_pos_ball <= ball_size) and ball_up = '1') then
+            ball_up <= '0';
+        elsif((v_pos_ball + ball_size >= vva) and ball_up = '0') then
+            ball_up <= '1';
+        end if;
+        --Kijken of hij links of rechts de rand raakt + punten geven
+        if((h_pos_ball <= ball_size) and ball_left = '1') then   --Punt gescoord door speler2
+          if(score2 = 20) then
+            score2 <= 0;
+            score1 <= 0;
+          else
+            score2 <= score2 + 1;
+          end if;
+          
+          ball_left <= '0';
+          ball_up <= '1';
+          h_pos_ball <= hva/2;          --Reset ball positie waardes na scoren van een punt
+          v_pos_ball <= vva/2;
+        elsif((h_pos_ball + ball_size >= hva) and ball_left = '0') then  --Punt gescoord door speler1
+          if(score2 = 20) then
+            score2 <= 0;
+            score1 <= 0;
+          else
+            score1 <= score1 + 1;
+          end if;
+                
+            ball_left <= '0';
+            ball_up <= '1';
+            h_pos_ball <= hva/2;          --Reset ball positie waardes na scoren van een punt
+            v_pos_ball <= vva/2;
+        end if;
         
---    --Ball hits top moving left or right
---    elsif ((v_pos_ball <= border_size + ball_size) and (h_pos_ball <= left_direction))
---    or    ((v_pos_ball <= border_size + ball_size) and (h_pos_ball <= right_direction)) then
---      ball_v_motion <= down_direction;    --Ball beweegt naar beneden    
---    end if;
-    
---    v_pos_ball <= v_pos_ball + ball_v_motion; --Berekent volgende ball positie
---end process;
+        --update score_pads hier (zijn de output signalen voor score)
+          score_pad1 <= score1;
+          score_pad2 <= score2;
+          
+        --Hier eerst nog code schrijven voor het detecteren van pad_on + ball_on?
+        if(pad1_on = '1' and ball_on = '1') then
+          ball_left <= '0';  --botst tegen de linker paddle en begint naar rechts te gaan
+        elsif(pad2_on = '1' and ball_on = '1') then
+          ball_left <= '1';  --botst tegen de rechter paddle en begint naar links te gaan
+        end if;
+        
+        --update de movement van de ball: eerst verticaal, dan horizontaal
+        if(ball_up = '1') then
+          v_pos_ball <= v_pos_ball + ball_speed; --gaat naar boven
+        else
+          v_pos_ball <= v_pos_ball - ball_speed; --gaat naar beneden
+        end if;
+        if(ball_left = '1') then
+          h_pos_ball <= h_pos_ball + ball_speed; --gaat naar links
+        else
+          h_pos_ball <= h_pos_ball - ball_speed; --gaat naar rechts
+        end if;
+    end if;
+end process;
 
---p_move_ball_h: process       --Verandert de horizontale richting van de ball per frame (new_frame = '1')
---begin
---  wait until(rising_edge(vga_clk) and new_frame = '1');
-      
---    --Ball hits right border moving up
---    if ((h_pos_ball >= hva - border_size - ball_size) and (v_pos_ball <= up_direction)) then   --border_size nog bij afgetrokken zodat hij tegen de witte rand botst
---      ball_h_motion <= left_direction;    --Ball beweegt naar links
---      if(score1 < 9) then
---        score1 <= score1 + 1;
---      else
---        score1 <= 0;
---      end if;
---    --Ball hits right border moving down
---    elsif((h_pos_ball >= hva - border_size - ball_size) and (v_pos_ball <= down_direction)) then
---      ball_h_motion <= left_direction;    --Ball beweegt naar links
---      if(score1 < 9) then
---        score1 <= score1 + 1;
---      else
---        score1 <= 0;
---      end if;
---    --Ball hits left border moving up
---    elsif((h_pos_ball <= border_size + ball_size) and (v_pos_ball <= up_direction)) then
---      ball_h_motion <= right_direction;   --Ball beweegt naar rechts
---      if(score2 < 9) then
---        score2 <= score2 + 1;
---      else
---        score2 <= 0;
---      end if;
---    --Ball hits left border moving down
---    elsif((h_pos_ball <= border_size + ball_size) and (v_pos_ball <= down_direction)) then
---      ball_h_motion <= right_direction;   --Ball beweegt naar rechts
---      if(score2 < 9) then
---        score2 <= score2 + 1;
---      else
---        score2 <= 0;
---      end if;
---    end if;
---    score_pad1 <= score1;
---    score_pad2 <= score2;
---    h_pos_ball <= h_pos_ball + ball_h_motion; --Berekent volgende ball positie
---end process;
+p_move_ball_h: process       --Verandert de horizontale richting van de ball per frame (new_frame = '1')
+begin
+  wait until(rising_edge(vga_clk));
+    if(new_frame = '1') then
+    
+    end if;
+end process;
 
 p_move_pad1: process       --Verandert de positie van pad1
 begin

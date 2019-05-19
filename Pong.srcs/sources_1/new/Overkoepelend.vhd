@@ -4,7 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Overkoepelend is
     Port ( 
-       --reset : in std_logic := '0';  --Kan gelijk gesteld worden aan button CPU reset? Niet kunnen testen
        clk_in1: in std_logic;  --Is de 100MHz klok die binnenkomt van XDC file
        BTNU, BTNL, BTNR, BTND: in std_logic;
        VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
@@ -50,8 +49,9 @@ signal pulseout100hz : std_logic;
 constant div: integer := 250000; -- van 25MHz => 100Hz
 
 --Score Signals
-signal score_pad1, score_pad2 : integer range 0 to 9;
+signal score_pad1, score_pad2 : integer range 0 to 20;
 constant numberDisplays : integer := 8;
+constant maxTientalScore : integer := 2; --Tot een maximale score van 20
 
    component clk_wiz_0
    port(
@@ -92,7 +92,7 @@ constant numberDisplays : integer := 8;
      v_pos: in integer;
      VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
      VGA_HS, VGA_VS: out std_logic;
-     score_pad1, score_pad2: out integer range 0 to 9
+     score_pad1, score_pad2: out integer range 0 to 20
    );
    end component;
    
@@ -104,9 +104,10 @@ constant numberDisplays : integer := 8;
    end component;
    
    component intTo7Segm is
-   generic (max : integer := 8);
-   Port ( score1 : in integer range 0 to 9;
-     score2 : in integer range 0 to 9;
+   generic (max : integer := 8;
+            maxTiental: integer := 2);
+   Port ( score1 : in integer range 0 to 20;
+     score2 : in integer range 0 to 20;
      segm_clk : in std_logic;
      pulse100hz : in std_logic;
      AN : out std_logic_vector (7 downto 0);
@@ -177,7 +178,8 @@ begin
     
     intToSegm : intTo7Segm
     generic map(
-       max => numberDisplays
+       max => numberDisplays,
+       maxTiental => maxTientalScore
     )    
     port map (
        score1 => score_pad1,

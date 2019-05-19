@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon May 13 18:05:14 2019
-| Host         : Laptop-Jelle running 64-bit major release  (build 9200)
+| Date         : Sun May 19 15:47:47 2019
+| Host         : NVS1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Overkoepelend_control_sets_placed.rpt
 | Design       : Overkoepelend
 | Device       : xc7a100t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     6 |
-| Unused register locations in slices containing registers |    20 |
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    22 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,10 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      8 |            1 |
 |     10 |            1 |
-|    16+ |            5 |
+|     14 |            1 |
+|    16+ |            6 |
 +--------+--------------+
 
 
@@ -45,27 +47,30 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              10 |            4 |
+| No           | No                    | No                     |              14 |            6 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              54 |            8 |
-| Yes          | No                    | No                     |             128 |           16 |
+| No           | Yes                   | No                     |              54 |            9 |
+| Yes          | No                    | No                     |             282 |           37 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              20 |            3 |
+| Yes          | Yes                   | No                     |              28 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+----------------------------+-------------------------+------------------+----------------+
-|      Clock Signal     |        Enable Signal       |     Set/Reset Signal    | Slice Load Count | Bel Load Count |
-+-----------------------+----------------------------+-------------------------+------------------+----------------+
-|  Klokje/inst/clk_out1 |                            |                         |                4 |             10 |
-|  Klokje/inst/clk_out1 |                            | teller/h_cnt[9]_i_1_n_0 |                3 |             20 |
-|  Klokje/inst/clk_out1 | teller/h_cnt[9]_i_1_n_0    | teller/v_cnt[9]_i_1_n_0 |                3 |             20 |
-|  Klokje/inst/clk_out1 |                            | divider/cnt_reg[1]_0    |                5 |             34 |
-|  Klokje/inst/clk_out1 | vga_mapping/v_topPos_pad10 |                         |                8 |             64 |
-|  Klokje/inst/clk_out1 | vga_mapping/v_topPos_pad20 |                         |                8 |             64 |
-+-----------------------+----------------------------+-------------------------+------------------+----------------+
++-----------------------+-------------------------------+-------------------------------+------------------+----------------+
+|      Clock Signal     |         Enable Signal         |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++-----------------------+-------------------------------+-------------------------------+------------------+----------------+
+|  Klokje/inst/clk_out1 | vga_mapping/score1[3]_i_2_n_0 | vga_mapping/score1[3]_i_1_n_0 |                1 |              8 |
+|  Klokje/inst/clk_out1 | vga_mapping/score2            |                               |                1 |             10 |
+|  Klokje/inst/clk_out1 |                               |                               |                6 |             14 |
+|  Klokje/inst/clk_out1 |                               | teller/h_cnt[9]_i_1_n_0       |                4 |             20 |
+|  Klokje/inst/clk_out1 | teller/h_cnt[9]_i_1_n_0       | teller/v_cnt[9]_i_1_n_0       |                2 |             20 |
+|  Klokje/inst/clk_out1 |                               | divider/cnt_reg[1]_0          |                5 |             34 |
+|  Klokje/inst/clk_out1 | teller/v_topPos_pad10         |                               |                8 |             64 |
+|  Klokje/inst/clk_out1 | teller/v_topPos_pad20         |                               |                8 |             64 |
+|  Klokje/inst/clk_out1 | teller/new_frame              |                               |               20 |            144 |
++-----------------------+-------------------------------+-------------------------------+------------------+----------------+
 
 
