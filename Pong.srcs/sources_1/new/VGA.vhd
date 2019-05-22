@@ -27,8 +27,8 @@ entity VGA is
         BTNU,BTNL, BTNR, BTND: in std_logic;
         VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
         VGA_HS, VGA_VS, v_sync, h_sync: out std_logic;
-        score_pad1 : out integer range 0 to 20 := 0;
-        score_pad2 : out integer range 0 to 20 := 0
+        score_pad1 : out integer range 0 to 9 := 0;
+        score_pad2 : out integer range 0 to 9 := 0
     );
 end VGA;
 
@@ -54,7 +54,7 @@ signal ball_left: std_logic := '0';
 --mogen de horizontale posities constant zijn? Want die veranderen nooit
 constant pad_width: integer := 10;
 constant pad_length: integer := 50;
-constant pad_speed: integer := 15;
+constant pad_speed: integer := 5;
 signal h_leftPos_pad1: integer := 10; --Linkse positie van eerste pad (is de linkse)
 signal v_topPos_pad1: integer := 200;     --Denk nog pad length of pad length /2 bij optellen om in het midden te komen
 signal h_leftPos_pad2: integer := 639 - border_size - pad_width - 5; --Rechtse positie van tweede pad (is de rechtse) 
@@ -121,41 +121,35 @@ end process;
 
 --Dit zou voldoende moeten zijn om de bal rond het speelveld te laten botsen en een punt aan te rekenen wanneer deze de linker of recht rand aanraakt
 --Ook het botsen met de paddles zou geimplementeerd moeten zijn
-p_move_ball: process       --Verandert de verticale richting van de ball per frame (new_frame = '1')
+p_update_ball: process       --Verandert de verticale richting van de ball per frame (new_frame = '1')
 begin
   wait until(rising_edge(vga_clk));
     if(new_frame = '1') then
         --Kijken of ball boven of onder raakt
-        if((v_pos_ball <= ball_size) and ball_up = '1') then
+        if((v_pos_ball <= ball_size + border_size) and ball_up = '1') then
             ball_up <= '0';
-        elsif((v_pos_ball + ball_size >= vva) and ball_up = '0') then
+            ball_left <= ball_left;
+        elsif((v_pos_ball + ball_size >= vva - border_size) and ball_up = '0') then
             ball_up <= '1';
         end if;
         --Kijken of hij links of rechts de rand raakt + punten geven
-        if((h_pos_ball <= ball_size) and ball_left = '1') then   --Punt gescoord door speler2
-          if(score2 = 20) then
+        if((h_pos_ball <= ball_size + border_size) and ball_left = '1') then   --Punt gescoord door speler2
+          if(score2 >= 9) then
             score2 <= 0;
             score1 <= 0;
           else
             score2 <= score2 + 1;
           end if;
+          ball_left <= '0';  --Nog aanpassen om terug op start positie te zetten
           
-          ball_left <= '0';
-          ball_up <= '1';
-          h_pos_ball <= hva/2;          --Reset ball positie waardes na scoren van een punt
-          v_pos_ball <= vva/2;
-        elsif((h_pos_ball + ball_size >= hva) and ball_left = '0') then  --Punt gescoord door speler1
-          if(score2 = 20) then
+        elsif((h_pos_ball + ball_size >= hva - border_size) and ball_left = '0') then  --Punt gescoord door speler1
+          if(score1 >= 9) then
             score2 <= 0;
             score1 <= 0;
           else
             score1 <= score1 + 1;
           end if;
-                
-            ball_left <= '0';
-            ball_up <= '1';
-            h_pos_ball <= hva/2;          --Reset ball positie waardes na scoren van een punt
-            v_pos_ball <= vva/2;
+            ball_left <= '1';
         end if;
         
         --update score_pads hier (zijn de output signalen voor score)
@@ -163,41 +157,40 @@ begin
           score_pad2 <= score2;
           
         --Hier eerst nog code schrijven voor het detecteren van pad_on + ball_on?
-        if(pad1_on = '1' and ball_on = '1') then
-          ball_left <= '0';  --botst tegen de linker paddle en begint naar rechts te gaan
-        elsif(pad2_on = '1' and ball_on = '1') then
-          ball_left <= '1';  --botst tegen de rechter paddle en begint naar links te gaan
-        end if;
-        
-        --update de movement van de ball: eerst verticaal, dan horizontaal
-        if(ball_up = '1') then
-          v_pos_ball <= v_pos_ball + ball_speed; --gaat naar boven
-        else
-          v_pos_ball <= v_pos_ball - ball_speed; --gaat naar beneden
-        end if;
-        if(ball_left = '1') then
-          h_pos_ball <= h_pos_ball + ball_speed; --gaat naar links
-        else
-          h_pos_ball <= h_pos_ball - ball_speed; --gaat naar rechts
+        if((h_pos_ball + ball_size = h_leftPos_pad2) and (v_pos_ball - ball_size <= v_topPos_pad2 + pad_length) and (v_pos_ball + ball_size >= v_topPos_pad2) and ball_left = '0') then
+            ball_left <= '1';
+        elsif((h_pos_ball - ball_size = h_leftPos_pad1 + pad_width) and (v_pos_ball - ball_size <= v_topPos_pad1 + pad_length) and (v_pos_ball + ball_size >= v_topPos_pad1) and ball_left = '1') then
+            ball_left <= '0';
         end if;
     end if;
 end process;
 
-p_move_ball_h: process       --Verandert de horizontale richting van de ball per frame (new_frame = '1')
+p_move_ball: process
 begin
   wait until(rising_edge(vga_clk));
-    if(new_frame = '1') then
-    
+  if(new_frame = '1') then
+    --update de movement van de ball: eerst verticaal, dan horizontaal
+    --Hierin nog beide kanten vergelijken en ball resetten 
+    if(ball_up = '1') then
+      v_pos_ball <= v_pos_ball - ball_speed; --gaat naar boven
+    else
+      v_pos_ball <= v_pos_ball + ball_speed; --gaat naar beneden
     end if;
+    if(ball_left = '1') then
+      h_pos_ball <= h_pos_ball - ball_speed; --gaat naar links
+    else
+      h_pos_ball <= h_pos_ball + ball_speed; --gaat naar rechts
+    end if;
+  end if;
 end process;
 
 p_move_pad1: process       --Verandert de positie van pad1
 begin
   wait until(rising_edge(vga_clk) and new_frame = '1');
     if(BTNU = '1' and (v_topPos_pad1 > border_size)) then       --Kijkt ook na of hij tegen de top van het veld zit
-      v_topPos_pad1 <= v_topPos_pad1 - 1;
+      v_topPos_pad1 <= v_topPos_pad1 - pad_speed;
     elsif(BTNL = '1' and (v_topPos_pad1 + pad_length < vva - border_size - 1)) then        --Kijkt ook na of hij tegen de onderkant van het veld zit
-      v_topPos_pad1 <= v_topPos_pad1 + 1;
+      v_topPos_pad1 <= v_topPos_pad1 + pad_speed;
     else
       v_topPos_pad1 <= v_topPos_pad1;  --Verandert er niet
     end if;
@@ -207,9 +200,9 @@ p_move_pad2: process       --Verandert de positie van pad2
 begin
   wait until(rising_edge(vga_clk) and new_frame = '1');
     if(BTNR = '1' and (v_topPos_pad2 > border_size)) then       --Kijkt ook na of hij tegen de top van het veld zit
-      v_topPos_pad2 <= v_topPos_pad2 - 1;
+      v_topPos_pad2 <= v_topPos_pad2 - pad_speed;
     elsif(BTND = '1' and (v_topPos_pad2 + pad_length < vva - border_size - 1)) then        --Kijkt ook na of hij tegen de onderkant van het veld zit
-      v_topPos_pad2 <= v_topPos_pad2 + 1;
+      v_topPos_pad2 <= v_topPos_pad2 + pad_speed;
     else
       v_topPos_pad2 <= v_topPos_pad2;  --Verandert er niet
     end if;

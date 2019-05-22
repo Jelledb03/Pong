@@ -46,10 +46,10 @@ signal locked : std_logic := '0';
 
 --clkdivider (100Hz pulse) Signals
 signal pulseout100hz : std_logic;
-constant div: integer := 250000; -- van 25MHz => 100Hz
+constant div: integer := 50000; -- van 25MHz => 100Hz
 
 --Score Signals
-signal score_pad1, score_pad2 : integer range 0 to 20;
+signal score_pad1, score_pad2 : integer range 0 to 9;
 constant numberDisplays : integer := 8;
 constant maxTientalScore : integer := 2; --Tot een maximale score van 20
 
@@ -92,7 +92,7 @@ constant maxTientalScore : integer := 2; --Tot een maximale score van 20
      v_pos: in integer;
      VGA_R, VGA_G, VGA_B: out std_logic_vector(3 downto 0);
      VGA_HS, VGA_VS: out std_logic;
-     score_pad1, score_pad2: out integer range 0 to 20
+     score_pad1, score_pad2: out integer range 0 to 9
    );
    end component;
    
@@ -106,8 +106,8 @@ constant maxTientalScore : integer := 2; --Tot een maximale score van 20
    component intTo7Segm is
    generic (max : integer := 8;
             maxTiental: integer := 2);
-   Port ( score1 : in integer range 0 to 20;
-     score2 : in integer range 0 to 20;
+   Port ( score1 : in integer range 0 to 9;
+     score2 : in integer range 0 to 9;
      segm_clk : in std_logic;
      pulse100hz : in std_logic;
      AN : out std_logic_vector (7 downto 0);

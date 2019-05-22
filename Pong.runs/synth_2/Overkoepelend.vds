@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun May 19 15:45:53 2019
-# Process ID: 32376
+# Start of session at: Mon May 20 18:25:16 2019
+# Process ID: 20164
 # Current directory: C:/Vivado/Pong/Pong.runs/synth_2
 # Command line: vivado.exe -log Overkoepelend.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Overkoepelend.tcl
 # Log file: C:/Vivado/Pong/Pong.runs/synth_2/Overkoepelend.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14192 
+INFO: Helper process launched with PID 10000 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 403.387 ; gain = 97.707
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 403.383 ; gain = 97.883
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Overkoepelend' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:22]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-32376-NVS1/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Klokje' of component 'clk_wiz_0' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:125]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-32376-NVS1/realtime/clk_wiz_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-20164-Laptop-Jelle/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Klokje' of component 'clk_wiz_0' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [C:/Vivado/Pong/Pong.runs/synth_2/.Xil/Vivado-20164-Laptop-Jelle/realtime/clk_wiz_0_stub.vhdl:13]
 	Parameter v_max bound to: 525 - type: integer 
 	Parameter h_max bound to: 800 - type: integer 
 INFO: [Synth 8-3491] module 'opteller' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd:5' bound to instance 'teller' of component 'opteller' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:130]
@@ -29,10 +29,10 @@ INFO: [Synth 8-638] synthesizing module 'opteller' [C:/Vivado/Pong/Pong.srcs/sou
 	Parameter h_max bound to: 800 - type: integer 
 	Parameter v_max bound to: 525 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'opteller' (1#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/Opteller.vhd:14]
-	Parameter divideby bound to: 250000 - type: integer 
+	Parameter divideby bound to: 50000 - type: integer 
 INFO: [Synth 8-3491] module 'clkdivider' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd:5' bound to instance 'divider' of component 'clkdivider' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:140]
 INFO: [Synth 8-638] synthesizing module 'clkdivider' [C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd:12]
-	Parameter divideby bound to: 250000 - type: integer 
+	Parameter divideby bound to: 50000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'clkdivider' (2#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/clkdivider.vhd:12]
 INFO: [Synth 8-3491] module 'VGA' declared at 'C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:13' bound to instance 'vga_mapping' of component 'vga' [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:151]
 INFO: [Synth 8-638] synthesizing module 'VGA' [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:35]
@@ -45,8 +45,6 @@ INFO: [Synth 8-638] synthesizing module 'intTo7Segm' [C:/Vivado/Pong/Pong.srcs/s
 	Parameter maxTiental bound to: 2 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'intTo7Segm' (4#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/intTo7Segm.vhd:24]
 INFO: [Synth 8-256] done synthesizing module 'Overkoepelend' (5#1) [C:/Vivado/Pong/Pong.srcs/sources_1/new/Overkoepelend.vhd:22]
-WARNING: [Synth 8-3331] design intTo7Segm has unconnected port score1[4]
-WARNING: [Synth 8-3331] design intTo7Segm has unconnected port score2[4]
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[31]
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[30]
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[29]
@@ -112,7 +110,7 @@ WARNING: [Synth 8-3331] design VGA has unconnected port vbp[2]
 WARNING: [Synth 8-3331] design VGA has unconnected port vbp[1]
 WARNING: [Synth 8-3331] design VGA has unconnected port vbp[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 457.977 ; gain = 152.297
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 458.668 ; gain = 153.168
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -125,10 +123,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 457.977 ; gain = 152.297
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 458.668 ; gain = 153.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 457.977 ; gain = 152.297
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 458.668 ; gain = 153.168
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -146,16 +144,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 816.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 816.234 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 816.457 ; gain = 510.777
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 816.234 ; gain = 510.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 816.457 ; gain = 510.777
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 816.234 ; gain = 510.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -164,18 +162,16 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Viv
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Vivado/Pong/Pong.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for Klokje. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 816.457 ; gain = 510.777
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 816.234 ; gain = 510.734
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "pulseout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:209]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:197]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:178]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:173]
-INFO: [Synth 8-5546] ROM "score2" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "score2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:160]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:162]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:129]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Vivado/Pong/Pong.srcs/sources_1/new/VGA.vhd:136]
 INFO: [Synth 8-5544] ROM "VGA_R" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 816.457 ; gain = 510.777
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 816.234 ; gain = 510.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -191,27 +187,26 @@ Detailed RTL Component Info :
 	   3 Input     33 Bit       Adders := 2     
 	   2 Input     32 Bit       Adders := 18    
 	   2 Input     31 Bit       Adders := 1     
-	   2 Input     18 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
-	                5 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 7     
 	   6 Input      4 Bit        Muxes := 1     
 	   8 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -231,11 +226,11 @@ Detailed RTL Component Info :
 Module clkdivider 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     18 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
 +---Registers : 
-	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module VGA 
 Detailed RTL Component Info : 
@@ -245,19 +240,18 @@ Detailed RTL Component Info :
 	   2 Input     31 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
 +---Registers : 
-	                5 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     31 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 7     
 	   6 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 5     
 Module intTo7Segm 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	                3 Bit    Registers := 1     
@@ -315,11 +309,11 @@ WARNING: [Synth 8-3331] design VGA has unconnected port hbp[1]
 WARNING: [Synth 8-3331] design VGA has unconnected port hbp[0]
 WARNING: [Synth 8-3331] design VGA has unconnected port vbp[31]
 WARNING: [Synth 8-3331] design VGA has unconnected port vbp[30]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[29]
+WARNING: [Synth 8-3331] design VGA has unconnected port vbp[28]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3332] Sequential element (score_pad1_reg[4]) is unused and will be removed from module VGA.
-WARNING: [Synth 8-3332] Sequential element (score_pad2_reg[4]) is unused and will be removed from module VGA.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 816.457 ; gain = 510.777
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 816.234 ; gain = 510.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -333,13 +327,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Klokje/clk_out1' to pin 'Klokje/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 816.457 ; gain = 510.777
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 816.234 ; gain = 510.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 832.156 ; gain = 526.477
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -351,7 +345,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -375,7 +369,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -388,7 +382,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -400,25 +394,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -436,14 +430,14 @@ Report Cell Usage:
 |      |Cell             |Count |
 +------+-----------------+------+
 |1     |clk_wiz_0_bbox_0 |     1|
-|2     |CARRY4           |   191|
-|3     |LUT1             |    92|
-|4     |LUT2             |   606|
-|5     |LUT3             |    79|
-|6     |LUT4             |    92|
-|7     |LUT5             |    25|
-|8     |LUT6             |    16|
-|9     |FDRE             |   189|
+|2     |CARRY4           |   212|
+|3     |LUT1             |    95|
+|4     |LUT2             |   543|
+|5     |LUT3             |    99|
+|6     |LUT4             |   231|
+|7     |LUT5             |    22|
+|8     |LUT6             |    11|
+|9     |FDRE             |   188|
 |10    |IBUF             |     4|
 |11    |OBUF             |    29|
 +------+-----------------+------+
@@ -452,20 +446,20 @@ Report Instance Areas:
 +------+--------------+-----------+------+
 |      |Instance      |Module     |Cells |
 +------+--------------+-----------+------+
-|1     |top           |           |  1324|
-|2     |  divider     |clkdivider |    28|
-|3     |  intToSegm   |intTo7Segm |    24|
-|4     |  teller      |opteller   |   336|
-|5     |  vga_mapping |VGA        |   899|
+|1     |top           |           |  1435|
+|2     |  divider     |clkdivider |    25|
+|3     |  intToSegm   |intTo7Segm |    25|
+|4     |  teller      |opteller   |   309|
+|5     |  vga_mapping |VGA        |   970|
 +------+--------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 66 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 834.863 ; gain = 170.703
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 834.863 ; gain = 529.184
+Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 853.203 ; gain = 190.137
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 853.203 ; gain = 547.703
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 195 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 216 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -473,11 +467,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-40 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+38 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 834.863 ; gain = 540.656
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 853.203 ; gain = 559.172
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Vivado/Pong/Pong.runs/synth_2/Overkoepelend.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Overkoepelend_utilization_synth.rpt -pb Overkoepelend_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 834.863 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun May 19 15:46:31 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 853.203 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 20 18:26:05 2019...
